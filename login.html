@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LOGIN PAGE</title>
+</head>
+<body>
+    <h1>LOGIN PAGE</h1>
+    <script>
+        function runProgram(input) {
+          // Write code here
+        }
+        if (process.env.USERNAME === "Bhavisha") {
+          runProgram(``);
+        } else {
+          process.stdin.resume();
+          process.stdin.setEncoding("ascii");
+          let read = "";
+          process.stdin.on("data", function (input) {
+            read += input;
+          });
+          process.stdin.on("end", function () {
+            read = read.replace(/\n$/, "");
+            read = read.replace(/\n$/, "");
+            runProgram(read);
+          });
+          process.on("SIGINT", function () {
+            read = read.replace(/\n$/, "");
+            runProgram(read);
+            process.exit(0);
+          });
+        }
+    </script>
+</body>
+</html>
